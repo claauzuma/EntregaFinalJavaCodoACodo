@@ -240,6 +240,11 @@
         }
 
         function validateForm(paymentType) {
+
+            if (cart.length === 0) {
+              alert('El carrito está vacío. Agregue productos antes de proceder al pago.');
+            return;
+             }
             const mesaValue = parseInt(mesaInput.value);
             if (isNaN(mesaValue) || mesaValue < 1 || mesaValue > 50) {
                 mesaError.textContent = 'Ingrese un número de mesa válido (entre 1 y 50)';
