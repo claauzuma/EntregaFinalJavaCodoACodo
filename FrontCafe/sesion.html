@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/sesion.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <a href="/index.html"> <- volver</a>
+
+    <div id="formularioRegistro">
+        <h1>Iniciar sesión</h1>
+        <br>
+        <form action="http://localhost:8080/proyectoJava_24112/login" method="POST">
+            <span>
+                <label for="email">Ingrese su correo electrónico:</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                <div class="error-text" id="email-error"></div>
+            </span>
+            <span>
+                <label for="password">Ingrese su contraseña:</label>
+                <br>
+                <input type="password" name="password" id="password" required>
+                <div class="error-text" id="password-error"></div>
+            </span>
+            <br>
+            <input type="submit" id="enviarBtn" value="Enviar">
+      
+        </form>
+    </div>
+    <script src='js/main.js'></script>
+</body>
+</html>

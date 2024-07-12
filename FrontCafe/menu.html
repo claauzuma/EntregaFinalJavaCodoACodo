@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cafetería Azul y Oro</title>
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Comienzo header -->
+    <header>
+        <h1 style="margin-top: -40px;"  >Menu</h1>
+         <nav>
+             <a href="./index.html">Inicio</a>
+             <a href="./nosotros.html">Nosotros</a>
+             <a class = "active" href="#menu">Menu</a>
+             <a href="./servicios.html">Servicios</a>
+             <a href="./contacto.html">Contacto</a>
+             <a id="carritoLink"href="./carrito.html">Carrito</a>   
+             <a id="loginLink"  href= "./sesion.html">Login</a>
+             <a id="registroLink" href= "./registro.html">Registrate</a>
+             <a id="cerrar-sesion" href="#" style="display: none;">Cerrar sesión</a>
+
+         </nav>
+    </header>
+    <!-- Fin header -->
+
+    <!-- Comienzo main -->
+    <main class="todo">
+        <br>
+    <h2 class="centrado">Te ofrecemos un menú de cafés super variado:</h2>
+    <br>
+
+    <h1 class="nombreProductos">Cafés</h1>
+    <br>
+
+    <section class="container top-products" >
+   
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/cafe-irish.jpg" alt="Cafe Irish" />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Cafe Irish</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3000 </p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/cafe-ingles.jpg"
+                        alt="Cafe incafe-ingles.jpg"
+                    />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Cafe Inglés</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$4000 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/cafe-australiano.jpg"
+                        alt="Cafe Australiano"
+                    />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Cafe Australiano</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3500 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/cafe-helado.jpg" alt="Cafe Helado" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Cafe Helado</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3200 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/cafe3.jpg" alt="Cafe Irish" />
+    
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Cafe el potente</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3300 </p>
+                </div>
+            </div>
+
+           
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/capuccino.jpg" alt="Cafe Irish" />
+            
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>El sabroso</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$4000 </p>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>    
+
+    <h1 class="nombreProductos">Jugos</h1>
+    <br>
+
+    <section class="container top-products" >
+   
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/jugoarandanos.jpg" alt="Cafe Irish" />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Jugo de arándanos</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2800 </p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/jugodefrutillas.jpg"
+                        alt="Cafe incafe-ingles.jpg"
+                    />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Jugo de frutillas</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2600 </p>
+                </div>
+            </div>
+            <!--  -->
+            
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/jugoexprimidonaranja.jpg" alt="Cafe Helado" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Exprimido de naranja</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2200 </p>
+                </div>
+            </div>
+
+        
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/jugomanzana.jpg" alt="Cafe Irish" />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Jugo de manzana</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2500 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/limonada2.jpg" alt="Cafe Irish" />
+            
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Limonada</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2350 </p>
+                </div>
+        </div>
+
+        
+    </section>    
+
+    <h1 class="nombreProductos">Panadería</h1>
+    <br>
+    
+    <section class="container top-products" >
+   
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/medialuna.jpg" alt="Cafe Irish" />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Cuarto menguante</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$800 </p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/donut.jpg"
+                        alt="Cafe incafe-ingles.jpg"
+                    />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Mara Dona</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$900 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/budindepan.jpg"
+                        alt="Cafe Australiano"
+                    />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Budah</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$2500 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/alfajorcitosmaicena.jpg" alt="Cafe Helado" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Alfi</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$400 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/panettone.jpg" alt="Cafe Irish" />
+    
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Panettone</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$1200 </p>
+                </div>
+            </div>
+
+        
+    </section>    
+
+    <h1 class="nombreProductos">Postres</h1>
+    <br>
+
+    <section class="container top-products" >
+   
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/heladochocolate.jpg" alt="Cafe Irish" />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Helado de chocolate</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3000 </p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/heladodracula.jpg"
+                        alt="Cafe incafe-ingles.jpg"
+                    />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Drácula</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3100 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/chocotorta.jpg"
+                        alt="Cafe Australiano"
+                    />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Chocotorta</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3000 </p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/panqueques.jpg" alt="Cafe Helado" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Panqueco</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$1500 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/flanespañol.jpg" alt="Cafe Irish" />
+    
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Flan español</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3200 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/ensaladadefrutas.jpg" alt="Cafe Irish" />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Ensalada de frutas</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3500 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/flandechocolate.jpg" alt="Cafe Irish" />
+            
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Flancho</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3000 </p>
+                </div>
+        </div>
+
+        
+    </section>    
+
+ 
+
+    <h1 class="nombreProductos">Tostados</h1>
+    <br>
+    <section class="container top-products" >
+   
+
+        <div class="container-products">
+            <!-- Producto 1 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/tostadoconpaltayhuevo.jpg" alt="Cafe Irish" />
+                
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Tostado con palta y huevo</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3200 </p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/tostadojamonycheddar.jpg"
+                        alt="Cafe incafe-ingles.jpg"
+                    />
+              
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Triple cheddar</h3>
+                    <span class="add-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </span>
+                    <p class="price"> $3500</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card-product">
+                <div class="container-img">
+                    <img
+                        src="img/tostadojamonyqueso.jpg"
+                        alt="TostadoJamonyQueso"
+                    />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Tostadito JyQo</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3650 </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <div class="container-img">
+                    <img src="img/tostadolomoyqueso.jpg" alt="lomoyqueso" />
+                    <div class="button-group">
+                        <span>
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-card-product">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Tostado lomo y queso</h3>
+                    <div class="quantity-input">
+                        <button class="quantity-btn minus-btn" type="button">-</button>
+                        <input class="quantity" type="number" value="1" min="1">
+                        <button class="quantity-btn plus-btn" type="button">+</button>
+                        <button class="add-to-cart-btn" type="button">Agregar</button>
+                    </div>
+            
+                    <p class="price">$3900 </p>
+                </div>
+            </div>
+
+           
+        
+    </section>    
+
+
+    
+
+    </main>
+  
+    <footer>
+        <div class="Contacto">
+            <h4>Mantenete en contacto</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Calle falsa 123, Palermo, CABA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>15-5555-6789</p>
+            <p><i class="fa fa-envelope mr-2"></i>cafeteria@email.com</p>
+        </div>
+        <div class="Redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="Horarios">
+            <h4>Horarios de apertura</h4>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 am - 7:00 pm</li>
+                <li><strong>Sábados:</strong> 8:00 am - 8:00 pm</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+            </ul>            
+        </div>
+
+        <div class="Medios-pago">
+            <h4>Medios de Pago</h4>
+            <ul>
+                <li><i class="fab fa-cc-visa"></i> Visa</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-paypal"></i> Mercado Pago</li>
+                <li><i class="fas fa-money-bill-wave"></i> Efectivo</li>
+            </ul>
+        </div>
+        <a href="#top" class="boton-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+    
+
+<script src="js/gestionCarritos.js"> </script>
+
+<script src="js/gestionUsuarios.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .product-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-actions button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .product-actions button:hover {
+            background-color: #0056b3;
+        }
+
+        .total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 18px;
+        }
+
+        .checkout-info {
+            margin-top: 20px;
+        }
+
+        .checkout-info label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .checkout-info input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .checkout-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .checkout-btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            flex: 1;
+            margin: 5px;
+        }
+
+        .checkout-btn.online {
+            background-color: #28a745;
+        }
+
+        .checkout-btn.online:hover {
+            background-color: #218838;
+        }
+
+        .checkout-btn.cash {
+            background-color: #007bff;
+        }
+
+        .checkout-btn.cash:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin-top: -40px;">Carrito</h1>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a  href="./menu.html">Menu</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./contacto.html">Contacto</a>
+            <a class="active" id="carritoLink" href="./carrito.html">Carrito</a>   
+            <a id="loginLink" href="./sesion.html">Login</a>
+            <a id="registroLink" href="./registro.html">Registrate</a>
+            <a id="cerrar-sesion" href="#" style="display: none;">Cerrar sesión</a>
+        </nav>
+    </header>
+<br>
+<br>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <ul class="product-list" id="product-list">
+            <!-- Aquí se listarán los productos del carrito -->
+        </ul>
+
+        <div class="total" id="total">
+            <p>Total: $0</p>
+        </div>
+
+        <div class="checkout-info">
+            <label for="mesa">Número de mesa</label>
+            <input type="number" id="mesa" name="mesa" min="1" max="50" required>
+            <div class="error" id="mesa-error"></div>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <div class="error" id="nombre-error"></div>
+        </div>
+
+        <div class="checkout-buttons">
+            <button class="checkout-btn online" onclick="validateForm('online')">Pagar online</button>
+            <button class="checkout-btn cash" onclick="validateForm('cash')">Pagar en caja</button>
+        </div>
+        
+        <div class="error" id="carrito-error"></div>
+    </div>
+
+    <script src="js/gestionUsuarios.js"></script>
+
+    <script>
+        // Recuperar el carrito de localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Referencias a elementos del DOM
+        const productList = document.getElementById('product-list');
+        const totalElement = document.getElementById('total');
+        const mesaInput = document.getElementById('mesa');
+        const nombreInput = document.getElementById('nombre');
+        const mesaError = document.getElementById('mesa-error');
+        const nombreError = document.getElementById('nombre-error');
+        const carritoError = document.getElementById('carrito-error');
+
+        // Función para actualizar la lista de productos y el total
+        function updateCart() {
+            productList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(product => {
+                const productItem = document.createElement('li');
+                productItem.classList.add('product-item');
+
+                productItem.innerHTML = `
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>Precio: $${product.price} | Cantidad: ${product.quantity}</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="remove-btn">Eliminar</button>
+                    </div>
+                `;
+
+                productList.appendChild(productItem);
+
+                total += product.total;
+
+                // Agregar evento para el botón de eliminar
+                productItem.querySelector('.remove-btn').addEventListener('click', () => {
+                    removeFromCart(product.name);
+                });
+            });
+
+            totalElement.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
+        }
+
+        // Función para eliminar un producto del carrito
+        function removeFromCart(productName) {
+            const index = cart.findIndex(product => product.name === productName);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            }
+        }
+
+        function validateForm(paymentType) {
+            const mesaValue = parseInt(mesaInput.value);
+            if (isNaN(mesaValue) || mesaValue < 1 || mesaValue > 50) {
+                mesaError.textContent = 'Ingrese un número de mesa válido (entre 1 y 50)';
+                return;
+            } else {
+                mesaError.textContent = '';
+            }
+            const nombreValue = nombreInput.value.trim();
+            if (nombreValue === '') {
+                nombreError.textContent = 'Este campo es obligatorio';
+                return;
+            } else {
+                nombreError.textContent = '';
+            }
+            if (cart.length === 0) {
+                carritoError.textContent = 'El carrito está vacío, agregue productos antes de proceder al pago';
+                return;
+            } else {
+                carritoError.textContent = '';
+            }
+            const descripcionConcatenada = cart.map(product => `${product.quantity} x ${product.name}`).join(', ');
+            const data = {
+                numeroDeMesa: mesaValue,
+                nombre: nombreValue,
+                descripcion: descripcionConcatenada,
+                precioTotal: cart.reduce((total, product) => total + product.total, 0)
+            };
+
+            if (paymentType === 'online') {
+        alert("Se hace online");
+        console.log(data);
+        fetch('http://localhost:8080/proyectoJava_24112/GestionPedidosServlet', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta del servidor:', data);
+            alert('Pago online realizado con éxito, pronto te llegará el pedido a la mesa');
+            localStorage.removeItem('cart'); // Vaciar el carrito
+            window.location.href = './index.html'; // Redirigir a la página de inicio
+        })
+        .catch(error => {
+            console.error('Error al enviar la solicitud:', error);
+            alert('Error al procesar el pago online');
+        });
+    } else if (paymentType === 'cash') {
+        fetch('http://localhost:8080/proyectoJava_24112/GestionPedidosPendientes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta del servidor:', data);
+            alert('Pedido hecho, acercarse a caja para realizar el pago');
+            localStorage.removeItem('cart'); // Vaciar el carrito
+            window.location.href = './index.html'; // Redirigir a la página de inicio
+        })
+        .catch(error => {
+            console.error('Error al enviar la solicitud:', error);
+            alert('Error al procesar el pago en caja');
+        });
+    }
+}
+
+        updateCart();
+    </script>
+</body>
+</html>

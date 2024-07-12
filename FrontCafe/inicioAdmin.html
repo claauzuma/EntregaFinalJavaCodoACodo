@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Cafetería Azul y Oro</title>
+
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Comienzo header -->
+    <header>
+        <h1 style="margin-top: -40px;">Bienvenido Admin</h1>
+         <nav>
+             <a class="active"  href="./inicioAdmin.html">Inicio</a>
+             <a href="./gestionUsuariosAdmin.html">Usuarios</a>
+             <a href="./gestionPedidosAdmin.html">Pedidos</a>
+             <a id="cerrar-sesion" href="./logout.html" style="display: inline;">Cerrar sesión</a>
+         </nav>
+
+    </header>
+
+            <h1 id="bienvenida">¡Hola!</h1>
+
+                <script>
+                    // Obtener el nombre de usuario de la query string
+                    const params = new URLSearchParams(window.location.search);
+                    const nombre = params.get('nombre');
+            
+                    // Mostrar el nombre en la página
+                    if (nombre) {
+                        document.getElementById('bienvenida').textContent = 'Bienvenido, ' + nombre;
+                    }
+                </script>
+ 
+
+    <!-- Comienzo del pie de pagina -->
+    <footer>
+        <!-- Contacto -->
+        <div class="Contacto">
+            <h4>Mantenete en contacto</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Calle falsa 123, Palermo, CABA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>15-5555-6789</p>
+            <p><i class="fa fa-envelope mr-2"></i>cafeteria@email.com</p>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="Redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <!-- Horarios -->
+        <div class="Horarios">
+            <h4>Horarios de apertura</h4>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 am - 7:00 pm</li>
+                <li><strong>Sábados:</strong> 8:00 am - 8:00 pm</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+            </ul>            
+        </div>
+        <!-- Medios de pago -->
+        <div class="Medios-pago">
+            <h4>Medios de Pago</h4>
+            <ul>
+                <li><i class="fab fa-cc-visa"></i> Visa</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-paypal"></i> Mercado Pago</li>
+                <li><i class="fas fa-money-bill-wave"></i> Efectivo</li>
+            </ul>
+        </div>
+        <!-- Volver al inicio -->
+        <a href="#top" class="boton-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+    <!-- Fin del pie de pagina -->
+
+    <script>
+
+       
+        document.getElementById('cerrar-sesion').addEventListener('click', function(event) {
+            event.preventDefault();
+            cerrarSesion();
+        });
+
+        // Función para manejar el cierre de sesión
+        function cerrarSesion() {
+            logeado = false;
+            alert('Sesión cerrada');
+            // Redirigir a la página de inicio o a la página de login
+            window.location.href = './index.html';
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>

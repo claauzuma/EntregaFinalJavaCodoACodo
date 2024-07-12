@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuarios - Cafetería Azul y Oro</title>
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Comienzo header -->
+    <header>
+        <h1 style="margin-top: -40px;">Gestion de usuarios</h1>
+        <nav>
+            <a class="active" href="./gestionUsuariosAdmin.html">Usuarios</a>
+            <a href="./gestionPedidosAdmin.html">Pedidos</a>
+            <a id="cerrar-sesion" style="display: inline;">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="d-flex align-items-center mb-3">
+            <h2 class="mb-0">Usuarios</h2>
+            <button class="btn btn-success ml-3" onclick="mostrarCrearModal()">Agregar</button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Tipo Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usuarios-tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div class="Contacto">
+            <h4>Mantenete en contacto</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Calle falsa 123, Palermo, CABA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>15-5555-6789</p>
+            <p><i class="fa fa-envelope mr-2"></i>cafeteria@email.com</p>
+        </div>
+
+        <div class="Redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="Horarios">
+            <h4>Horarios de apertura</h4>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 am - 7:00 pm</li>
+                <li><strong>Sábados:</strong> 8:00 am - 8:00 pm</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+            </ul>            
+        </div>
+
+        <div class="Medios-pago">
+            <h4>Medios de Pago</h4>
+            <ul>
+                <li><i class="fab fa-cc-visa"></i> Visa</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-paypal"></i> Mercado Pago</li>
+                <li><i class="fas fa-money-bill-wave"></i> Efectivo</li>
+            </ul>
+        </div>
+
+        <a href="#top" class="boton-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+<!-- Modal para modificar usuario -->
+<div class="modal fade" id="modificarModal" tabindex="-1" aria-labelledby="modificarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modificarModalLabel">Modificar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="modificarForm">
+                    <input type="hidden" id="userId">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoUsuario" class="form-label">Tipo Usuario</label>
+                        <input type="text" class="form-control" id="tipoUsuario" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para crear usuario -->
+<div class="modal fade" id="crearModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Modificar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="crearForm">
+                    <input type="hidden" id="userId2">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="password2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoUsuario" class="form-label">Tipo Usuario</label>
+                        <input type="text" class="form-control" id="tipoUsuario2" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarRegistro()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/gestionUsuariosAdmin.js"></script>
+</body>
+</html>

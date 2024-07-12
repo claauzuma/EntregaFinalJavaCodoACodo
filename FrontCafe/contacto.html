@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cafetería Azul y Oro</title>
+
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Comienzo header -->
+    <header>
+        <h1 style="margin-top: -40px;" >Contacto</h1>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="menu.html">Menu</a>
+            <a href="servicios.html">Servicios</a>
+            <a class="active" href="./contacto.html">Contacto</a>
+            <a id="carritoLink"href="./carrito.html">Carrito</a>   
+            <a id="loginLink" href="./sesion.html">Login</a>
+            <a id="registroLink" href="./registro.html">Registrate</a>
+            <a id="cerrar-sesion" href="#" style="display: none;">Cerrar sesión</a>
+        </nav>
+    </header>
+    <!-- Fin header -->
+    
+    <!-- Comienzo main -->
+    <main>
+        <section>
+            <!-- datos -->
+            <article>
+                <div class="datos-generales">
+                    <div class="">
+                        <h4>Direccion</h4>
+                        <p>Calle falsa 123, Palermo, CABA</p>
+                    </div>
+                    <div class="">
+                        <h4>Telefono</h4>
+                        <p>+54 15-5555-6789</p>
+                    </div>
+                    <div class="">
+                        <h4>E-mail</h4>
+                        <p>cafeteria@email.com</p>
+                    </div>
+                </div>
+            </article>
+            <!-- formulario -->
+            <article>
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.608480261965!2d-58.43278382666551!3d-34.588771956704875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb588f4af5d17%3A0x560fe6ff3f099abf!2sPlaza%20Serrano!5e0!3m2!1ses-419!2sar!4v1712098633821!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="formulario">
+                    <form id="contactForm" action="http://localhost:8080/proyectoJava_24112/EnviarCorreoServlet" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        <br>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+                        <br>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su e-mail" required>
+                        <br>
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Deje su numero de contacto">
+                        <br>
+                        <label for="tipo">Tipo de Mensaje:</label>
+                        <input type="radio" name="tipo" value="Comentario" required>Comentario
+                        <input type="radio" name="tipo" value="Informacion">Informacion
+                        <input type="radio" name="tipo" value="Contacto/Servicios">Contacto/Servicios
+                        <input type="radio" name="tipo" value="Otros">Otros
+                        <br>
+                        <label for="comentarios">Mensaje:</label>
+                        <br>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Déjanos tu comentario..." required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>  
+     <!-- Fin main -->
+
+    <!-- Comienzo del pie de pagina -->
+    <footer>
+        <!-- Contacto -->
+        <div class="Contacto">
+            <h4>Mantenete en contacto</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Calle falsa 123, Palermo, CABA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>15-5555-6789</p>
+            <p><i class="fa fa-envelope mr-2"></i>cafeteria@email.com</p>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="Redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <!-- Horarios -->
+        <div class="Horarios">
+            <h4>Horarios de apertura</h4>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 am - 7:00 pm</li>
+                <li><strong>Sábados:</strong> 8:00 am - 8:00 pm</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+            </ul>            
+        </div>
+        <!-- Medios de pago -->
+        <div class="Medios-pago">
+            <h4>Medios de Pago</h4>
+            <ul>
+                <li><i class="fab fa-cc-visa"></i> Visa</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-paypal"></i> Mercado Pago</li>
+                <li><i class="fas fa-money-bill-wave"></i> Efectivo</li>
+            </ul>
+        </div>
+        <!-- Volver al inicio -->
+        <a href="#top" class="boton-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+    <!-- Fin del pie de pagina -->
+
+    <script src="js/gestionUsuarios.js"></script>
+</body>
+</html>

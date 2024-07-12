@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../FrontCafe/css/registro.css'>
+</head>
+<body>
+    <a href="/index.html"> <- volver</a>
+
+    <div id="formularioRegistro">
+        <h1>Registro</h1>
+        <br>
+        <form action="http://localhost:8080/proyectoJava_24112/registro" method="POST">
+            <span>
+                <label for="registrarEmail">Ingrese su nombre:</label>
+                <br>
+                <input type="text" name="nombre" id="registrarNombre" required>
+                <div class="error-text" id="nombre-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su apellido:</label>
+                <br>
+                <input type="text" name="apellido" id="registrarApellido" required>
+                <div class="error-text" id="apellido-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su correo electrónico:</label>
+                <br>
+                <input type="email" name="email" id="registrarEmail" required>
+                <div class="error-text" id="email-error"></div>
+            </span>
+            <span>
+                <label for="registrarContraseña">Ingrese su contraseña:</label>
+                <br>
+                <input type="password" name="password" id="registrarContraseña" required>
+                <div class="error-text" id="password-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su fecha de nacimiento:</label>
+                <br>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                <div class="error-text" id="fecha-error"></div>
+            </span>
+
+            <br>
+            <input type="submit" id="registrarseBtn" value="Registrarse">
+        </form>
+    </div>
+    <script src='js/registro.js'>
+
+
+
+   AOS.init();
+
+     window.onload = function () {
+     var urlParams = new URLSearchParams(window.location.search);
+     console.log(urlParams)
+     if (urlParams.get('exito') === 'true') {
+        document.getElementById('mensajeExito').style.display = 'block';
+          } else if (urlParams.get('error') === 'true') {
+                  document.getElementById('mensajeError').style.display = 'block';
+            }
+     };
+
+
+
+     
+    </script>
+
+
+
+    
+</body>
+</html>
