@@ -62,10 +62,10 @@ function mostrarModificarModal(id) {
         .then(response => response.json())
         .then(pedido => {
             document.getElementById('pedidoId1').value = pedido.id;
-            document.getElementById('mesaMod1').value = pedido.numero_de_mesa;
+            document.getElementById('mesaMod1').value = pedido.numeroDeMesa;
             document.getElementById('nombreMod1').value = pedido.nombre;
             document.getElementById('descripcionMod1').value = pedido.descripcion;
-            document.getElementById('precioTotalMod1').value = pedido.preciototal;
+            document.getElementById('precioTotalMod1').value = pedido.precioTotal;
             modificarModal.show();
         })
         .catch(error => console.error('Error al obtener el pedido:', error));
@@ -109,7 +109,7 @@ function guardarNuevoPedido() {
             document.getElementById('precioTotal').value = "";
             cargarPedidosPendientes();
         } else {
-            alert('Error al modificar el pedido');
+            alert('Error al crear el pedido');
         }
     })
     .catch(error => console.error('Error:', error));

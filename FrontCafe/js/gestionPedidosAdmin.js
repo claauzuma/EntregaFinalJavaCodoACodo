@@ -1,8 +1,10 @@
 
 let modificarModal;
+let agregarModal;
 
 document.addEventListener('DOMContentLoaded', function() {
     modificarModal = new bootstrap.Modal(document.getElementById('modificarModal'));
+    agregarModal = new bootstrap.Modal(document.getElementById('agregarModal'));
     cargarPedidos();
 });
 
@@ -53,22 +55,37 @@ function cargarPedidos() {
 }
 
 
+
 function mostrarModificarModal(id) {
     console.log("Vamos a modificar el pedido con ID:", id);
+    
     fetch(`http://localhost:8080/proyectoJava_24112/GestionPedidosServlet?id=${id}`)
         .then(response => response.json())
         .then(pedido => {
+            console.log(pedido);
             document.getElementById('pedidoId').value = pedido.id;
-            document.getElementById('mesa').value = pedido.numero_de_mesa;
+            document.getElementById('mesa').value = pedido.numeroDeMesa;
             document.getElementById('nombre').value = pedido.nombre;
             document.getElementById('descripcion').value = pedido.descripcion;
-            document.getElementById('precioTotal').value = pedido.preciototal;
+            document.getElementById('precioTotal').value = pedido.precioTotal;
+
             modificarModal.show();
         })
         .catch(error => console.error('Error al obtener el pedido:', error));
 }
 
-function guardarModificacion() {
+
+
+
+function mostrarAgregarModal() {
+    console.log("Vamos a crear el pedido daleeeeeeeeeeeeeeeeeeeee");
+    agregarModal.show();
+       
+}
+
+
+function guardarNuevoPedido() {
+    alert("Vamos a guardar el pedido CHEEEEEEEEEEEEEEEE");
     const pedido = {
         id: document.getElementById('pedidoId').value,
         numeroDeMesa: document.getElementById('mesa').value,
@@ -76,6 +93,47 @@ function guardarModificacion() {
         descripcion: document.getElementById('descripcion').value,
         precioTotal: document.getElementById('precioTotal').value
     };
+    console.log("Vamos a guardar el pedido")
+    console.log(pedido);
+
+    fetch('http://localhost:8080/proyectoJava_24112/GestionPedidosServlet', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pedido)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.exito);
+        if (data.exito) {
+            agregarModal.hide();
+            document.getElementById('pedidoId').value = "";
+            document.getElementById('mesa').value = "";
+            document.getElementById('nombre').value = "";
+            document.getElementById('descripcion').value = "";
+            document.getElementById('precioTotal').value = "";
+            cargarPedidos();
+        } else {
+            alert('Error al modificar el pedido');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+
+function guardarModificacion() {
+    console.log("Procedemos a guardar la modificacion")
+    const pedido = {
+
+        id: document.getElementById('pedidoId').value,
+        numeroDeMesa: document.getElementById('mesa').value,
+        nombre: document.getElementById('nombre').value,
+        descripcion: document.getElementById('descripcion').value,
+        precioTotal: document.getElementById('precioTotal').value
+    };
+    console.log(pedido);
+    console.log("Le enviamos el pedido al back")
 
     fetch('http://localhost:8080/proyectoJava_24112/GestionPedidosServlet', {
         method: 'PUT',
@@ -96,6 +154,8 @@ function guardarModificacion() {
     })
     .catch(error => console.error('Error:', error));
 }
+
+
 
 function eliminarPedido(id) {
     console.log("EL ID ES EL " +id)

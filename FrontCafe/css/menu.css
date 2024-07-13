@@ -9,13 +9,13 @@
 
 .circulo {
     display: inline-block;
-    width: 150px; /* Ancho del círculo */
-    height: 50px; /* Altura del círculo */
-    line-height: 50px; /* Alineación vertical */
-    border-radius: 50%; /* Hace que el elemento tenga forma de círculo */
-    background-color: brown; /* Color de fondo del círculo */
-    text-align: center; /* Centra el texto horizontalmente en el círculo */
-    color: white; /* Color del texto */
+    width: 150px; 
+    height: 50px;
+    line-height: 50px; 
+    border-radius: 50%; 
+    background-color: brown; 
+    text-align: center; 
+    color: white; 
     margin-left: 40%;
 
   }
@@ -29,8 +29,8 @@
     background-color: #deb887;
     margin-left: 10px;
   
-    padding: 10px; /* Añade un espacio de relleno interno de 10px alrededor del contenido */
-    margin: 10px; /* Añade un espacio de margen externo de 10px alrededor del div */
+    padding: 10px; 
+    margin: 10px; 
     
 }
 
@@ -40,24 +40,82 @@
    width: 300px;
    border-style:dotted;
    background-color: #deb887;
-   padding: 10px; /* Añade un espacio de relleno interno de 10px alrededor del contenido */
+   padding: 10px; 
   
    
 }
 
 .centrado {
-    margin-left: 30%;
+	text-align: center;
+	color: #8B4513; 
+}
+
+
+.quantity-btn {
+    background-color: brown;
     color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.quantity-btn:focus {
+    outline: none;
+}
+
+.quantity-btn:hover {
+    background-color: darkbrown;
+}
+
+.minus-btn,
+.plus-btn {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.minus-btn:focus,
+.plus-btn:focus {
+    outline: none;
+}
+
+.minus-btn:hover,
+.plus-btn:hover {
+    background-color: darkbrown;
+}
+
+.add-to-cart-btn {
+    background-color: #B0926A; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:focus {
+    outline: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #8B4513;
 }
 
 
 
 div img {
-    width: 80%; /* Ajusta el ancho de las imágenes al 100% del ancho del contenedor */
-    height: autopx; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
-    border-radius: 15px; /* Agrega bordes redondeados a las imágenes */
-    margin-bottom: 10px; /* Agrega un margen inferior a las imágenes para separarlas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las imágenes */
+    width: 80%; 
+    height: autopx; 
+    border-radius: 15px; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
 
   body {
@@ -100,9 +158,7 @@ html {
 	box-sizing: border-box;
 }
 
-/* ********************************** */
-/*             UTILIDADES             */
-/* ********************************** */
+
 .container {
 	max-width: 120rem;
 	margin: 0 auto;
@@ -114,9 +170,7 @@ html {
 	font-size: 3rem;
 }
 
-/* ********************************** */
-/*               HEADER               */
-/* ********************************** */
+
 .container-hero {
 	background-color: var(--background-color);
 }
@@ -185,7 +239,7 @@ html {
 	flex-direction: column;
 }
 
-/* ************* NAVBAR ************* */
+
 .container-navbar {
 	background-color: var(--primary-color);
 }
@@ -272,9 +326,6 @@ html {
 	color: #fff;
 }
 
-/* ********************************** */
-/*               BANNER               */
-/* ********************************** */
 .banner {
 	background-image: linear-gradient(100deg, #000000, #00000020),
 		url('img/banner.jpg');
@@ -314,16 +365,12 @@ html {
 	border-radius: 3rem;
 }
 
-/* ********************************** */
-/*            MAIN CONTENT            */
-/* ********************************** */
+
 .main-content {
 	background-color: var(--background-color);
 }
 
-/* ********************************** */
-/*              FEATURES              */
-/* ********************************** */
+
 .container-features {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -364,9 +411,7 @@ html {
 	font-weight: 500;
 }
 
-/* ********************************** */
-/*             CATEGORIES             */
-/* ********************************** */
+
 
 .top-categories {
 	display: flex;
@@ -443,9 +488,7 @@ html {
 	color: var(--primary-color);
 }
 
-/* ********************************** */
-/*            TOP PRODUCTS            */
-/* ********************************** */
+
 .top-products {
 	display: flex;
 	flex-direction: column;
@@ -480,7 +523,6 @@ html {
 	color: #fff;
 }
 
-/* Products */
 .container-products {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -633,9 +675,6 @@ html {
 	margin-left: 0.5rem;
 }
 
-/* ********************************** */
-/*               GALLERY              */
-/* ********************************** */
 .gallery {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -655,9 +694,7 @@ html {
 	grid-row: 1/3;
 }
 
-/* ********************************** */
-/*              SPECIALS              */
-/* ********************************** */
+
 .specials {
 	display: flex;
 	flex-direction: column;
@@ -665,9 +702,6 @@ html {
 	margin-bottom: 3rem;
 }
 
-/* ********************************** */
-/*                BLOGS               */
-/* ********************************** */
 .blogs {
 	display: flex;
 	flex-direction: column;
@@ -771,9 +805,7 @@ html {
 	background-color: var(--dark-color);
 }
 
-/* ********************************** */
-/*               FOOTER               */
-/* ********************************** */
+
 
 .footer {
 	background-color: var(--primary-color);
@@ -941,9 +973,7 @@ html {
 	font-size: 1.6rem;
 }
 
-/* ********************************** */
-/*       MEDIA QUERIES -- 768px       */
-/* ********************************** */
+
 @media (max-width: 768px) {
 	html {
 		font-size: 55%;
@@ -1044,9 +1074,6 @@ html {
 	}
 }
 
-/* ********************************** */
-/*       MEDIA QUERIES -- 468px       */
-/* ********************************** */
 @media (max-width: 468px) {
 	html {
 		font-size: 42.5%;
